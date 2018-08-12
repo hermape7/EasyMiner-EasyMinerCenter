@@ -1,22 +1,25 @@
 //@import url(http://fonts.googleapis.com/css?family=Droid\+Sans:400,700);
 
+//import variables for EMC
+@import 'variables/variables.styl'
 
 //import basic shared styles
 @import '../../submodules/EasyMiner-MiningUI/web/css.stylus/_mixins.styl'
-@import '_mixinsEMC.styl'
+@import 'lib/_mixinsEMC.styl'
 
 //impot basic styles
-@import '_boilerplate.styl'
-@import 'flexbox.styl'
+@import 'base/_boilerplate.styl'
+@import 'lib/flexbox.styl'
 
-//import project specific styles
-@import '_body.styl'
-@import '_header.styl'
-@import '_footer.styl'
+//import layout styles
+@import 'base/_body.styl'
+@import 'layout/_header.styl'
+@import 'layout/_footer.styl'
+
 @import '_forms.styl'
 @import '_flashMessages.styl'
 
-@import '_errorPage.styl'
+@import 'components/pages/_errorPage.styl'
 @import '_overlay.styl'
 @import '_preprocessing.styl'
 @import '_user.styl'
