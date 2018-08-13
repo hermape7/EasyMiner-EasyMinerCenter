@@ -2,27 +2,34 @@
 
 //import variables for EMC
 @import 'variables/variables.styl'
+@import 'lib/mixins.styl'
 
 //import basic shared styles
 @import '../../submodules/EasyMiner-MiningUI/web/css.stylus/_mixins.styl'
 @import 'lib/_mixinsEMC.styl'
 
+
 //impot basic styles
-@import 'base/_boilerplate.styl'
+@import 'base/boilerplate.styl'
 @import 'lib/flexbox.styl'
 
 //import layout styles
-@import 'base/_body.styl'
-@import 'layout/_header.styl'
-@import 'layout/_footer.styl'
+@import 'base/body.styl'
+@import 'layout/header.styl'
+@import 'layout/footer.styl'
 
-@import '_forms.styl'
 @import '_flashMessages.styl'
-
-@import 'components/pages/_errorPage.styl'
 @import '_overlay.styl'
 @import '_preprocessing.styl'
 @import '_user.styl'
-@import '_data.styl'
-@import '_homepage.styl'
 
+//components
+@import 'components/forms.styl'
+@import 'components/pages/errorPage.styl'
+@import 'components/pages/homepage.styl'
+@import 'components/pages/loginPage.styl'
+@import 'components/pages/registrationPage.styl'
+@import 'components/pages/forgottenPasswordPage.styl'
+@import 'components/pages/changePasswordPage.styl'
+
+@import '_data.styl'

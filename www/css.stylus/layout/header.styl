@@ -1,0 +1,200 @@
+/** Styles for main page HEADER */
+
+headerLink()
+	flex-center-row()
+	width 48px
+	padding-top 54px
+	padding-bottom 2px
+	margin 0 12px
+	font-size 10px
+	background-position center 2px
+	background-repeat no-repeat
+	opacity 0.7
+	color transparent
+	+m_tablet()
+		opacity 1
+		color headerTextColor
+	&:hover
+	&.active
+		color headerTextColor
+		opacity 1
+	&.disabled
+		opacity 0.4
+		cursor not-allowed
+
+headerAppsLink()
+	flex-start-row()
+	width 48px
+	border 1px solid headerMenuBgColor
+	padding 54px 10px 4px 10px
+	margin 5px
+	font-size 10px
+	background-position center 2px
+	background-repeat no-repeat
+	opacity 0.9
+	//color black
+	text-decoration none
+	+m_tablet()
+		opacity 1
+		color headerTextColor
+	&:hover
+	&.active
+		opacity 1
+		text-decoration none
+		border 1px solid headerBgColor
+	&.disabled
+		opacity 0.4 !important
+		cursor not-allowed
+
+body > header
+	background url("../images/bg-header.png") repeat-x scroll bottom headerBgColor
+	flexbox(flex)
+	min-width 100%
+	font-family fontFamily
+	font-size baseFontSize
+	div.content
+		width 100%
+		flexbox(flex)
+		flex-direction(row)
+		flex-justify(space-between)
+		flex-align(end)
+		#mainHeader
+			flex-start-column()
+			margin-left 10px
+			height 100%
+			> h1
+				color headerTextColor
+				font-family "Times New Roman", Times, serif
+				font-size 3em
+				font-weight normal
+				letter-spacing 2px
+				margin 0
+				cursor pointer
+			> span
+				font-size 1em
+				letter-spacing 1px
+				color headerTextColor
+				width 100%
+				flex-center-row()
+				margin-bottom 5px
+				margin-top -5px
+			> sup
+				color: #9de045;
+				font-size: 0.6em;
+				letter-spacing: normal;
+				margin-left: 10px;
+				position: relative
+			/*SPECIAL TYPES OF H1*/
+			&.typeR
+				padding-right 86px
+				background transparent url('../images/logo-r.png') right 0 no-repeat
+			&.typeLM
+				padding-right 200px
+				background transparent url('../images/logo-lm.png') right 32px no-repeat
+		div#applicationSubTitle
+			flexbox(flex)
+			flex-center-row()
+			font-size 0.8em
+			font-weight 700
+			height 100%
+			color headerTextColor
+		
+		div.headerLinks
+			flexbox(flex)
+			flex-direction(row-reverse)
+			font-weight: bold;
+			color headerTextColor
+			height 100%
+			a
+				flex-self(center)
+				color headerTextColor
+				text-decoration none
+				&.user
+					flex-center-column()
+					flex-justify(space-between)
+					padding 2px 0 2px 0
+					height 70px
+					.img
+						//display block
+						flexbox(flex)
+						background url('../images/icons/user-48.png') center center no-repeat
+						width 48px
+						height 48px
+					.name
+						flex-center-row()
+						font-size 10px
+					&:hover, &.active
+						.img img
+							border-color headerTextColor
+				&.help
+					headerLink()
+					background-image url('../images/icons/help-48.png')
+			#headerAppsLink
+				headerLink()
+				background-image url('../images/icons/apps-48.png')
+	
+	.headerMenu
+		background headerMenuBgColor
+		position absolute
+		display none
+		z-index 100
+		box-shadow(0, 0, 10px, 0, boxShadowColor)
+		div.menuLinkArrow
+			width 0 !important
+			border-color transparent transparent headerMenuBgColor
+			border-style dashed dashed solid
+			border-width 0 7px 7px
+			position absolute
+			padding 0 !important
+			min-width 0 !important
+			max-width 0 !important
+			top -7px
+		&#headerUserMenu
+			.img
+				margin headerMenuPadding
+				display block
+				float left
+				border none
+				width headerUserMenuImageSize
+				height headerUserMenuImageSize
+				overflow hidden
+				cursor pointer
+				img
+					max-width 100%
+					max-height 100%
+					width 100%
+			div
+				font-weight normal
+				font-size 80%
+				min-width 200px
+				padding-left headerUserMenuImageSize
+				padding-right headerMenuPadding
+				padding-top 0
+				&.name
+					font-weight bold
+					font-size 100%
+					min-width 2 * headerUserMenuImageSize
+					padding-top headerMenuPadding
+				&.actions
+					padding-top headerMenuPadding
+					padding-bottom headerMenuPadding
+					a
+						button()
+						margin 5px
+						font-size 0.9 * baseFontSize
+		
+		&#headerAppsMenu
+			padding 10px
+			max-width 240px
+			a
+				&.newMiner
+					headerAppsLink()
+					+m_tablet()
+						color black
+					background-image url('../images/icons/new-miner-48.png')
+				&.newFile
+					headerAppsLink()
+					+m_tablet()
+						color black
+					background-image url('../images/icons/new-file-48.png')
+

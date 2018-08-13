@@ -1,0 +1,95 @@
+div#homePage
+  flex-start-column()
+  flex-align(center)
+  #slogan
+	  flex-center-row()
+	  opacity 0.8
+	  margin blockMargin
+	  height 135px
+	  width 100%
+	  padding-right 10%
+	  padding-left 10%
+	  > div
+		  padding 2*blockMargin blockMargin
+		  display none
+		  width 100%
+		
+		  &.visible
+        flex-start-row()
+
+      .slogan-content
+        flex-center-column()
+        h2
+          flexbox(flex)
+          width 100%
+          font-size 1.6em
+          margin 0
+          padding 5px 0
+          color headerTextColor
+        p
+          flexbox(flex)
+          width 100%
+          margin 0
+          padding 0
+          color white
+      > img
+        flexbox(flex)
+        width 80px
+        height 80px
+        margin-right 30px
+
+  #actions
+    overflow auto
+    flex-center-row()
+    flex-wrap(wrap)
+    flex-align(stretch)
+    +mobile()
+      flex-center-column()
+    section
+      flex-direction(column)
+      block()
+      flex(25%)
+      +mobile()
+        flex(75%)
+        flex-justify(center)
+        flex-align(center)
+        margin-left 0
+        margin-right 0
+      h2
+        padding 10px 10px 5px 60px
+      &.start
+        flexbox(flex)
+        flex-direction(column)
+        flex-align(center)
+        flex-justify(start)
+        margin-left 10px
+        flex(35%)
+        max-width 370px
+        h2
+          background url(imagesPath + '/icons/plane-48.png') left center no-repeat
+        .actions
+          text-align center
+          flex-center-column()
+          flex(grow:1)
+          a
+            font-size baseFontSize
+            padding 15px 30px
+        +mobile()
+          max-width initial
+          margin-left 0
+          width 75%
+      &.more
+        flex-start-column()
+        flex-align(center)
+        h2
+          background url(imagesPath + '/icons/questinaire-48.png') left center no-repeat
+        ul
+          li
+            margin 10px
+            +mobile()
+              margin-right 0
+      &.about
+        flex-start-column()
+        flex-align(center)
+        h2
+          background url(imagesPath + '/icons/flag-48.png') left center no-repeat

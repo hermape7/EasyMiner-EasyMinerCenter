@@ -1,0 +1,97 @@
+box()
+  color color
+  background-color #FFF
+  border none
+  box-shadow(0, 0, 10px, 0, boxShadowColor)
+  padding 20px
+
+block()
+  box()
+  margin blockMargin blockMargin blockMargin 0
+  > h1, > h2
+    margin-top 0
+
+/***** media queries *****/
+max(bp)
+  @media only screen and (max-width: bp)
+    {block}
+
+min(bp)
+  @media only screen and (min-width: bp)
+    {block}
+
+between(bp1, bp2)
+  @media only screen and (min-width: bp1) and (max-width: bp2)
+    {block}
+
+mobile()
+  +max(large-start-value)
+    {block}
+
+m_tablet()
+  +between(large-start-value, extra-large-start-value)
+    {block}
+
+l_tablet()
+  +between(large-start-value, pc-start-value)
+    {block}
+pc()
+  +min(pc-start-value)
+    {block}
+
+
+// forms
+form-input()
+  flex-center-row()
+  box-sizing border-box
+  width 100%
+  margin 5px 0
+  height 3em
+  +pc()
+    height 2em
+  padding 0
+  border 1px solid rgba(0, 0, 0, 0.3)
+  +min(large-start-value)
+    font-size 1.0em
+
+// flexbox helpers
+flex-center-row()
+  flexbox(flex)
+  flex-direction(row)
+  flex-justify(center)
+  flex-align(center)
+
+flex-center-column()
+  flexbox(flex)
+  flex-direction(column)
+  flex-justify(center)
+  flex-align(center)
+
+flex-start-column()
+  flexbox(flex)
+  flex-direction(column)
+  flex-justify(start)
+  flex-align(start)
+
+flex-start-row()
+  flexbox(flex)
+  flex-direction(row)
+  flex-justify(start)
+  flex-align(start)
+
+center-text()
+  flexbox(flex)
+  flex-direction(row)
+  flex-justify(center)
+
+// others
+border-box-sizing()
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+remove-padding()
+  padding 0
+
+remove-margin()
+  margin 0

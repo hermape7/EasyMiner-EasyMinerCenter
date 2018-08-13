@@ -1,0 +1,63 @@
+#loginPage
+	//position relative
+	mainBlock()
+	flex-center-column()
+	width 400px
+	//min-height 450px
+	margin 0 0 0 0
+	+pc()
+		margin-top 10px
+	> h1,p
+		flex-start-row()
+		width 100%
+		//flex(grow:1)
+		//width formWidth
+		margin-top 0
+		margin-bottom 0
+	> p
+		margin-bottom 10px
+		+m_tablet()
+			font-size 1.28em
+	form
+		width 100%
+		.error
+			padding-left 15px
+			display block
+		.actions
+			width 100%
+			flexbox(flex)
+			flex-direction(row)
+			flex-justify(space-around)
+			remove-margin()
+			> input.button
+				form-input()
+				remove-padding()
+				width 150px
+			> a
+				form-input()
+				width 150px
+	
+	#frm-loginForm
+		.credentials
+			width 100%
+			input
+				form-input()
+		.small
+			width 100%
+			color labelColor
+			flexbox(flex)
+			flex-direction(column)
+			flex-justify(space-between)
+			label
+				flexbox(flex)
+				flex-justify(start)
+				flex-align(center)
+				font-size 0.9em
+				> input
+					margin 10px 10px 10px 5px
+					+pc()
+						margin 5px 5px 5px 5px
+			> a
+				margin 10px 10px 10px 5px
+				+pc()
+					margin 5px 5px 5px 5px

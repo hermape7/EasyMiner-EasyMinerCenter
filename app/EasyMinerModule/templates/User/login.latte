@@ -10,8 +10,10 @@
     <p>{_'Welcome to EasyMiner data-mining system!'}</p>
 
     {form loginForm}
-      <div>{input email}</div>
-      <div>{input password}</div>
+      <div class="credentials">
+        <div>{input email}</div>
+        <div>{input password}</div>
+      </div>
       <div class="small">
         {input remember}
         <a href="{link User:ForgottenPassword}">{_'I forgot my password...'}</a>

@@ -5,31 +5,35 @@
  *}
 {block content}
 
-  <div id="loginPage">
-    <h1 n:block=title>{_'EasyMiner sign up'}</h1>
-    <p n:if="(@$allowFacebook || @$allowGoogle)">{_'You can register, or use your social-network account...'}</p>
+	<div id="loginPage">
+		<h1 n:block=title>{_'EasyMiner sign up'}</h1>
+		<p n:if="(@$allowFacebook || @$allowGoogle)">{_'You can register, or use your social-network account...'}</p>
 
-    {form registrationForm}
-      <div>{label name /}{input name}<span class="error" n:ifcontent>{inputError name}</span></div>
-      <div>{label email /}{input email}<span class="error" n:ifcontent>{inputError email}</span></div>
-      <div>{label password /}{input password}<span class="error" n:ifcontent>{inputError password}</span></div>
-      <div>{label rePassword /}{input rePassword}<span class="error" n:ifcontent>{inputError rePassword}</span></div>
-      <div class="actions">
-        {input submit}
-        <a href="{link User:login}" class="button">{_'storno'}</a>
-      </div>
-    {/form}
+		{form registrationForm}
+			<div class="registration-value">{label name /}{input name}<span class="error" n:ifcontent>{inputError name}</span>
+			</div>
+			<div class="registration-value">{label email /}{input email}<span
+								class="error" n:ifcontent>{inputError email}</span></div>
+			<div class="registration-value">{label password /}{input password}<span
+								class="error" n:ifcontent>{inputError password}</span></div>
+			<div class="registration-value">{label rePassword /}{input rePassword}<span
+								class="error" n:ifcontent>{inputError rePassword}</span></div>
+			<div class="actions">
+				{input submit}
+				<a href="{link User:login}" class="button">{_'storno'}</a>
+			</div>
+		{/form}
 
 
-    <div class="otherLogins" n:if="(@$allowFacebook || @$allowGoogle)">
-      {if @$allowFacebook}
-        <a n:href="facebookLogin-open!" class="facebookLogin button">{_'Log in using Facebook...'}</a>
-      {/if}
-      {if @$allowGoogle}
-        <a n:href="googleLogin-open!" class="googleLogin button">{_'Log in using Google...'}</a>
-      {/if}
-    </div>
-  </div>
+		<div class="otherLogins" n:if="(@$allowFacebook || @$allowGoogle)">
+			{if @$allowFacebook}
+				<a n:href="facebookLogin-open!" class="facebookLogin button">{_'Log in using Facebook...'}</a>
+			{/if}
+			{if @$allowGoogle}
+				<a n:href="googleLogin-open!" class="googleLogin button">{_'Log in using Google...'}</a>
+			{/if}
+		</div>
+	</div>
 
 {/block}
 

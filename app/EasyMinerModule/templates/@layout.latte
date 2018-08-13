@@ -9,109 +9,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>{ifset #title}{include title|striptags} :: {/ifset}{$titleAppName}</title>
+    <meta charset="utf-8">
+    <title>{ifset #title}{include title|striptags} :: {/ifset}{$titleAppName}</title>
 
-	<link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/index.css">
+    <link rel="stylesheet" media="screen,projection,tv" href="{$basePath}/css/index.css">
 
-	<link rel="icon" type="image/png" href="{$basePath}/images/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="{$basePath}/images/favicon-16x16.png" sizes="16x16" />
-  <link rel="icon" type="image/x-icon" href="{$basePath}/images/favicon.ico" sizes="16x16" />
+    <link rel="icon" type="image/png" href="{$basePath}/images/favicon-32x32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="{$basePath}/images/favicon-16x16.png" sizes="16x16"/>
+    <link rel="icon" type="image/x-icon" href="{$basePath}/images/favicon.ico" sizes="16x16"/>
 
-	{block scripts}
-    <script src="{$basePath}/js/jquery.js"></script>
-  	<script src="{$basePath}/js/liveFormsValidation.js"></script>
-  	<script src="{$basePath}/js/main.js"></script>
+    {block scripts}
+        <script src="{$basePath}/js/jquery.js"></script>
+        <script src="{$basePath}/js/liveFormsValidation.js"></script>
+        <script src="{$basePath}/js/main.js"></script>
 
-  	{if !empty($includeHelp)}
-      {*region HELP*}
-      {foreach \EasyMiner\Help\Integration::$javascriptFiles as $file}
-        <script type="text/javascript" src="{$basePath}/_help/{$file}" ></script>
-      {/foreach}
-      {foreach \EasyMiner\Help\Integration::$cssFiles as $file}
-        <link rel="stylesheet" media="screen,projection,tv" type="text/css" href="{$basePath}/_help/{$file}" />
-      {/foreach}
-      <script type="text/javascript">
-        {var helpConfig=[
+    {if !empty($includeHelp)}
+        {*region HELP*}
+    {foreach \EasyMiner\Help\Integration::$javascriptFiles as $file}
+        <script type="text/javascript" src="{$basePath}/_help/{$file}"></script>
+    {/foreach}
+    {foreach \EasyMiner\Help\Integration::$cssFiles as $file}
+    <link rel="stylesheet" media="screen,projection,tv" type="text/css" href="{$basePath}/_help/{$file}"/>
+    {/foreach}
+        <script type="text/javascript">
+            {var helpConfig=[
           'dataDirectoryUrl'=>$basePath.'/_help/xml/',
           'dataFile'=>$includeHelp,
           'lang'=>'en'
         ]}
-        jQuery(document).ready(function(){l}
-          window.help=new EMHelp({$helpConfig});
-          jQuery('#headerHelpLink').click(function(){l}
+            jQuery(document).ready(function (){l}
+            window.help = new EMHelp({$helpConfig});
+            jQuery('#headerHelpLink').click(function (){l}
             help.show();
-          {r});
-        {r});
-      </script>
-      {*endregion HELP*}
+            {r})
+            ;
+            {r})
+            ;
+        </script>
+        {*endregion HELP*}
     {/if}
 
 
-  {/block}
-  {block head}{/block}
-  <script> document.documentElement.className+=' js' </script>
+    {/block}
+    {block head}{/block}
+    <script> document.documentElement.className += ' js' </script>
 </head>
 <body>
-  <header>
+<header>
     <div class="content">
-      <h1 id="applicationMainTitle" onclick="location.reload();">
-        EasyMiner<sup>{@$version}</sup>
-        <span>easy association rule mining</span>
-      </h1>
-      <div id="applicationSubTitle"></div>
+        <div id="mainHeader">
+            <h1 id="applicationMainTitle" onclick="location.reload();">
+                EasyMiner<sup>{@$version}</sup>
+            </h1>
+            <span>easy association rule mining</span>
+        </div>
+        <div id="applicationSubTitle"></div>
 
-      <div class="headerLinks">
-        {block headerLinks}
-          {if ($user->loggedIn)}
-            <a href="{link User:details}" id="headerUserLink" class="user">
-              <span class="img">{if !empty($user->identity->imageUrl)}<img src="{$user->identity->imageUrl}" alt="{$user->identity->name}" />{/if}</span>
-              <span class="name">{$user->identity->name}</span>
-            </a>
-          {else}
-            <a href="{link User:login}" class="user">
-              <span class="img"></span>
-              <span class="name">{_'Login...'}</span>
-            </a>
-          {/if}
-          <a id="headerAppsLink" href="#">{_'Menu'}</a>
-          {if !empty($includeHelp)}
-            <a class="help"  id="headerHelpLink" href="#">{_'Help'}</a>
-          {/if}
-        {/block}
-      </div>
+        <div class="headerLinks">
+            {block headerLinks}
+                {if ($user->loggedIn)}
+                    <a href="{link User:details}" id="headerUserLink" class="user">
+                        <span class="img">{if !empty($user->identity->imageUrl)}<img src="{$user->identity->imageUrl}"
+                                                                                     alt="{$user->identity->name}" />{/if}</span>
+                        <span class="name">{$user->identity->name}</span>
+                    </a>
+                {else}
+                    <a href="{link User:login}" class="user">
+                        <span class="img"></span>
+                        <span class="name">{_'Login...'}</span>
+                    </a>
+                {/if}
+                <a id="headerAppsLink" href="#">{_'Menu'}</a>
+                {if !empty($includeHelp)}
+                    <a class="help" id="headerHelpLink" href="#">{_'Help'}</a>
+                {/if}
+            {/block}
+        </div>
     </div>
     {*region headerMenus*}
     {if ($user->loggedIn)}
-      <div id="headerUserMenu" class="headerMenu">
-        <span class="img" onclick="location.href={link User:details};">{if !empty($user->identity->imageUrl)}<img src="{$user->identity->imageUrl}" alt="{$user->identity->name}" />{/if}</span>
-        <div class="name">{$user->identity->name}</div>
-        <div>{$user->identity->email}</div>
-        <div><a href="{link User:details}">{_'Show my profile'}</a></div>
-        <div class="actions"><a href="{link User:logout}">{_'Logout...'}</a></div>
-      </div>
+        <div id="headerUserMenu" class="headerMenu">
+            <span class="img" onclick="location.href={link User:details};">{if !empty($user->identity->imageUrl)}<img
+                    src="{$user->identity->imageUrl}" alt="{$user->identity->name}" />{/if}</span>
+            <div class="name">{$user->identity->name}</div>
+            <div>{$user->identity->email}</div>
+            <div><a href="{link User:details}">{_'Show my profile'}</a></div>
+            <div class="actions"><a href="{link User:logout}">{_'Logout...'}</a></div>
+        </div>
     {/if}
     <div id="headerAppsMenu" class="headerMenu">
-      {block headerAppsMenu}
-        <a class="newMiner" href="{plink Data:}" title="{_'Create new miner or open existing one...'}">{_'Miners'}</a>
-        <a class="newFile disabled" href="#" onclick="return false;">{_'CMS'}</a>
-      {/block}
+        {block headerAppsMenu}
+            <a class="newMiner" href="{plink Data:}"
+               title="{_'Create new miner or open existing one...'}">{_'Miners'}</a>
+            <a class="newFile disabled" href="#" onclick="return false;">{_'CMS'}</a>
+        {/block}
     </div>
     {*endregion headerMenus*}
-  </header>
+</header>
 
-  {block main}
+{block main}
     <main>
-      <div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
-      {include content}
+        <div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+        {include content}
     </main>
-  {/block}
+{/block}
 
-  <footer>
+<footer>
     <div class="content">
-      <div class="disclaimer"><a href="http://www.easyminer.eu">EasyMiner.eu</a> is an experimental academic project...</div>
-      <div class="copyright">Copyright &copy; <a href="http://kizi.vse.cz">KIZI, VŠE Praha</a></div>
+        <div class="disclaimer"><a href="http://www.easyminer.eu">EasyMiner.eu</a> is an experimental academic
+            project...
+        </div>
+        <div class="copyright">Copyright &copy; <a href="http://kizi.vse.cz">KIZI, VŠE Praha</a></div>
     </div>
-  </footer>
+</footer>
 </body>
 </html>

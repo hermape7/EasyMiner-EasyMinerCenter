@@ -1,0 +1,79 @@
+/*Základní vzhled stránky (základní styly)*/
+html
+	min-height 100%
+	flexbox(flex)
+	&.js .jshidden
+		display none
+
+body
+	flex-center-column()
+	flex-justify(space-between)
+	flex(grow:1)
+	background bodyBackgroundColor url(imagesPath + '/bg-body.jpg') center repeat
+	font-family fontFamily
+	font-size baseFontSize
+	overflow-y scroll
+	width 100%
+	
+	&.iframe
+		background iframeBodyBackgroundColor
+		min-width 0.3 * minContentWidth2
+	
+	main
+		width 100%
+		flex-center-column()
+		flex(grow:1)
+		+pc()
+			flex-center-column()
+			flex-justify(start)
+	
+	#ajax-spinner
+		margin 15px 0 0 15px
+		padding 13px
+		background transparent url(imagesPath + '/icons/icon-loading-bw-20.gif') no-repeat 50% 50%
+		font-size 0
+		z-index 123456
+		display none
+
+//TODO check this style
+
+h1
+	color rgb(146, 82, 19)
+	font-size 36px
+	font-weight normal
+	margin 10px 0 10px 0
+	padding 0
+
+h2
+	color rgb(49, 78, 100)
+	font-size 28px;
+	font-weight normal
+
+h3
+	color rgb(72, 113, 19)
+	font-size 19px
+	font-weight normal
+
+/*region basic classes */
+.smallBlock
+	smallBlock()
+
+.block
+	block()
+
+a.button
+	button()
+
+a.extButton
+	invisButton()
+
+div.actions
+div.buttons
+	a
+		button()
+
+div.bigButtons
+	a
+		bigButton()
+
+/*endregion*/
