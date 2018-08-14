@@ -346,16 +346,15 @@ td {
 }
 html {
   min-height: 100%;
-  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
-  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
-  display: -ms-flexbox /* TWEENER - IE 10 */;
-  display: -webkit-flex /* NEW - Chrome */;
-  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
 }
 html.js .jshidden {
   display: none;
 }
 body {
+  width: 100vw;
+  height: 100vh;
+}
+#wrapper {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -383,22 +382,18 @@ body {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-flex: 1;
-  -moz-box-flex: 1;
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
   background: #2d83be url("../images/bg-body.jpg") center repeat;
   font-family: 'Arial', /*'Droid Sans',*/ 'sans-serif';
   font-size: 16px;
   overflow-y: scroll;
   width: 100%;
+  height: 100%;
 }
-body.iframe {
+#wrapper.iframe {
   background: #fff;
   min-width: 400.5px;
 }
-body main {
+#wrapper main {
   width: 100%;
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
@@ -429,7 +424,7 @@ body main {
   flex: 1 0 auto;
 }
 @media only screen and (min-width: 1370px) {
-  body main {
+  #wrapper main {
     display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
     display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
     display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -459,7 +454,7 @@ body main {
     justify-content: flex-start;
   }
 }
-body #ajax-spinner {
+#wrapper #ajax-spinner {
   margin: 15px 0 0 15px;
   padding: 13px;
   background: transparent url("../images/icons/icon-loading-bw-20.gif") no-repeat 50% 50%;
@@ -626,7 +621,7 @@ div.bigButtons a span.details span.right {
 div.bigButtons a:hover span.details span.right {
   visibility: visible;
 }
-body > header {
+#wrapper header {
   background: url("../images/bg-header.png") repeat-x scroll bottom #075783;
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
@@ -637,7 +632,7 @@ body > header {
   font-family: 'Arial', /*'Droid Sans',*/ 'sans-serif';
   font-size: 16px;
 }
-body > header div.content {
+#wrapper header div.content {
   width: 100%;
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
@@ -661,8 +656,9 @@ body > header div.content {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
+  margin: 0 5%;
 }
-body > header div.content #mainHeader {
+#wrapper header div.content #mainHeader {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -689,7 +685,7 @@ body > header div.content #mainHeader {
   height: 100%;
 /*SPECIAL TYPES OF H1*/
 }
-body > header div.content #mainHeader > h1 {
+#wrapper header div.content #mainHeader > h1 {
   color: #fff;
   font-family: "Times New Roman", Times, serif;
   font-size: 3em;
@@ -698,7 +694,7 @@ body > header div.content #mainHeader > h1 {
   margin: 0;
   cursor: pointer;
 }
-body > header div.content #mainHeader > span {
+#wrapper header div.content #mainHeader > span {
   font-size: 1em;
   letter-spacing: 1px;
   color: #fff;
@@ -728,22 +724,22 @@ body > header div.content #mainHeader > span {
   margin-bottom: 5px;
   margin-top: -5px;
 }
-body > header div.content #mainHeader > sup {
+#wrapper header div.content #mainHeader > sup {
   color: #9de045;
   font-size: 0.6em;
   letter-spacing: normal;
   margin-left: 10px;
   position: relative;
 }
-body > header div.content #mainHeader.typeR {
+#wrapper header div.content #mainHeader.typeR {
   padding-right: 86px;
   background: transparent url("../images/logo-r.png") right 0 no-repeat;
 }
-body > header div.content #mainHeader.typeLM {
+#wrapper header div.content #mainHeader.typeLM {
   padding-right: 200px;
   background: transparent url("../images/logo-lm.png") right 32px no-repeat;
 }
-body > header div.content div#applicationSubTitle {
+#wrapper header div.content div#applicationSubTitle {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -776,7 +772,7 @@ body > header div.content div#applicationSubTitle {
   height: 100%;
   color: #fff;
 }
-body > header div.content div.headerLinks {
+#wrapper header div.content div.headerLinks {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -789,18 +785,17 @@ body > header div.content div.headerLinks {
   -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
-  font-weight: bold;
   color: #fff;
   height: 100%;
 }
-body > header div.content div.headerLinks a {
+#wrapper header div.content div.headerLinks a {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
   color: #fff;
   text-decoration: none;
 }
-body > header div.content div.headerLinks a.user {
+#wrapper header div.content div.headerLinks a.user {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -831,7 +826,7 @@ body > header div.content div.headerLinks a.user {
   padding: 2px 0 2px 0;
   height: 70px;
 }
-body > header div.content div.headerLinks a.user .img {
+#wrapper header div.content div.headerLinks a.user .img {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -841,7 +836,7 @@ body > header div.content div.headerLinks a.user .img {
   width: 48px;
   height: 48px;
 }
-body > header div.content div.headerLinks a.user .name {
+#wrapper header div.content div.headerLinks a.user .name {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -864,13 +859,21 @@ body > header div.content div.headerLinks a.user .name {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  font-size: 10px;
+  font-size: 0.8em;
+  letter-spacing: 1px;
 }
-body > header div.content div.headerLinks a.user:hover .img img,
-body > header div.content div.headerLinks a.user.active .img img {
-  border-color: #fff;
+@media only screen and (min-width: 1370px) {
+  #wrapper header div.content div.headerLinks a.user .name {
+    color: transparent;
+  }
 }
-body > header div.content div.headerLinks a.help {
+@media only screen and (min-width: 1370px) {
+  #wrapper header div.content div.headerLinks a.user .name:hover,
+  #wrapper header div.content div.headerLinks a.user .name .active {
+    color: #fff;
+  }
+}
+#wrapper header div.content div.headerLinks a.help {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -895,9 +898,9 @@ body > header div.content div.headerLinks a.help {
   align-items: center;
   width: 48px;
   padding-top: 54px;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
   margin: 0 12px;
-  font-size: 10px;
+  font-size: 0.8em;
   background-position: center 2px;
   background-repeat: no-repeat;
   opacity: 0.7;
@@ -905,21 +908,21 @@ body > header div.content div.headerLinks a.help {
   background-image: url("../images/icons/help-48.png");
 }
 @media only screen and (min-width: 768px) and (max-width: 1180px) {
-  body > header div.content div.headerLinks a.help {
+  #wrapper header div.content div.headerLinks a.help {
     opacity: 1;
     color: #fff;
   }
 }
-body > header div.content div.headerLinks a.help:hover,
-body > header div.content div.headerLinks a.help.active {
+#wrapper header div.content div.headerLinks a.help:hover,
+#wrapper header div.content div.headerLinks a.help.active {
   color: #fff;
   opacity: 1;
 }
-body > header div.content div.headerLinks a.help.disabled {
+#wrapper header div.content div.headerLinks a.help.disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
-body > header div.content div.headerLinks #headerAppsLink {
+#wrapper header div.content div.headerLinks #headerAppsLink {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -944,31 +947,32 @@ body > header div.content div.headerLinks #headerAppsLink {
   align-items: center;
   width: 48px;
   padding-top: 54px;
-  padding-bottom: 2px;
+  padding-bottom: 4px;
   margin: 0 12px;
-  font-size: 10px;
+  font-size: 0.8em;
   background-position: center 2px;
   background-repeat: no-repeat;
   opacity: 0.7;
   color: transparent;
+  height: 70px;
   background-image: url("../images/icons/apps-48.png");
 }
 @media only screen and (min-width: 768px) and (max-width: 1180px) {
-  body > header div.content div.headerLinks #headerAppsLink {
+  #wrapper header div.content div.headerLinks #headerAppsLink {
     opacity: 1;
     color: #fff;
   }
 }
-body > header div.content div.headerLinks #headerAppsLink:hover,
-body > header div.content div.headerLinks #headerAppsLink.active {
+#wrapper header div.content div.headerLinks #headerAppsLink:hover,
+#wrapper header div.content div.headerLinks #headerAppsLink.active {
   color: #fff;
   opacity: 1;
 }
-body > header div.content div.headerLinks #headerAppsLink.disabled {
+#wrapper header div.content div.headerLinks #headerAppsLink.disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }
-body > header .headerMenu {
+#wrapper header .headerMenu {
   background: #fff;
   position: absolute;
   display: none;
@@ -977,7 +981,7 @@ body > header .headerMenu {
   -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
   -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
 }
-body > header .headerMenu div.menuLinkArrow {
+#wrapper header .headerMenu div.menuLinkArrow {
   width: 0 !important;
   border-color: transparent transparent #fff;
   border-style: dashed dashed solid;
@@ -988,66 +992,69 @@ body > header .headerMenu div.menuLinkArrow {
   max-width: 0 !important;
   top: -7px;
 }
-body > header .headerMenu#headerUserMenu .img {
-  margin: 10px;
-  display: block;
-  float: left;
+#wrapper header .headerMenu #user-info {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+}
+#wrapper header .headerMenu #user-info .img {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
   border: none;
+  margin: 10px;
   width: 100px;
   height: 100px;
   overflow: hidden;
   cursor: pointer;
 }
-body > header .headerMenu#headerUserMenu .img img {
+#wrapper header .headerMenu #user-info .img img {
   max-width: 100%;
   max-height: 100%;
   width: 100%;
 }
-body > header .headerMenu#headerUserMenu div {
-  font-weight: normal;
-  font-size: 80%;
-  min-width: 200px;
-  padding-left: 100px;
-  padding-right: 10px;
-  padding-top: 0;
+#wrapper header .headerMenu #user-info #user-text {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 10px;
 }
-body > header .headerMenu#headerUserMenu div.name {
+#wrapper header .headerMenu #user-info #user-text .name {
   font-weight: bold;
-  font-size: 100%;
-  min-width: 200px;
-  padding-top: 10px;
 }
-body > header .headerMenu#headerUserMenu div.actions {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-body > header .headerMenu#headerUserMenu div.actions a {
-  background: #075783;
-  font-size: 14px;
-  font-family: 'Arial', /*'Droid Sans',*/ 'sans-serif';
-  font-weight: normal;
-  text-decoration: none;
-  cursor: pointer;
-  color: #fff;
-  border: 1px solid #314e64;
-  text-align: center;
-  display: inline-block;
-  padding: 8px 13px;
-  margin: 5px;
-  font-size: 14.4px;
-}
-body > header .headerMenu#headerUserMenu div.actions a:hover,
-body > header .headerMenu#headerUserMenu div.actions a:focus {
-  background: #2d83be;
-  color: #fff;
-  border: 1px solid #314e64;
-  text-decoration: none;
-}
-body > header .headerMenu#headerAppsMenu {
+#wrapper header .headerMenu#headerAppsMenu {
   padding: 10px;
   max-width: 240px;
 }
-body > header .headerMenu#headerAppsMenu a.newMiner {
+#wrapper header .headerMenu#headerAppsMenu a.newMiner {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -1082,27 +1089,27 @@ body > header .headerMenu#headerAppsMenu a.newMiner {
   background-image: url("../images/icons/new-miner-48.png");
 }
 @media only screen and (min-width: 768px) and (max-width: 1180px) {
-  body > header .headerMenu#headerAppsMenu a.newMiner {
+  #wrapper header .headerMenu#headerAppsMenu a.newMiner {
     opacity: 1;
     color: #fff;
   }
 }
-body > header .headerMenu#headerAppsMenu a.newMiner:hover,
-body > header .headerMenu#headerAppsMenu a.newMiner.active {
+#wrapper header .headerMenu#headerAppsMenu a.newMiner:hover,
+#wrapper header .headerMenu#headerAppsMenu a.newMiner.active {
   opacity: 1;
   text-decoration: none;
   border: 1px solid #075783;
 }
-body > header .headerMenu#headerAppsMenu a.newMiner.disabled {
+#wrapper header .headerMenu#headerAppsMenu a.newMiner.disabled {
   opacity: 0.4 !important;
   cursor: not-allowed;
 }
 @media only screen and (min-width: 768px) and (max-width: 1180px) {
-  body > header .headerMenu#headerAppsMenu a.newMiner {
+  #wrapper header .headerMenu#headerAppsMenu a.newMiner {
     color: #000;
   }
 }
-body > header .headerMenu#headerAppsMenu a.newFile {
+#wrapper header .headerMenu#headerAppsMenu a.newFile {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -1137,27 +1144,27 @@ body > header .headerMenu#headerAppsMenu a.newFile {
   background-image: url("../images/icons/new-file-48.png");
 }
 @media only screen and (min-width: 768px) and (max-width: 1180px) {
-  body > header .headerMenu#headerAppsMenu a.newFile {
+  #wrapper header .headerMenu#headerAppsMenu a.newFile {
     opacity: 1;
     color: #fff;
   }
 }
-body > header .headerMenu#headerAppsMenu a.newFile:hover,
-body > header .headerMenu#headerAppsMenu a.newFile.active {
+#wrapper header .headerMenu#headerAppsMenu a.newFile:hover,
+#wrapper header .headerMenu#headerAppsMenu a.newFile.active {
   opacity: 1;
   text-decoration: none;
   border: 1px solid #075783;
 }
-body > header .headerMenu#headerAppsMenu a.newFile.disabled {
+#wrapper header .headerMenu#headerAppsMenu a.newFile.disabled {
   opacity: 0.4 !important;
   cursor: not-allowed;
 }
 @media only screen and (min-width: 768px) and (max-width: 1180px) {
-  body > header .headerMenu#headerAppsMenu a.newFile {
+  #wrapper header .headerMenu#headerAppsMenu a.newFile {
     color: #000;
   }
 }
-body > footer {
+#wrapper footer {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -1176,7 +1183,7 @@ body > footer {
   left: 0;
   bottom: 0;
 }
-body > footer div.content {
+#wrapper footer div.content {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -1208,7 +1215,7 @@ body > footer div.content {
   height: 100%;
   font-size: 11px;
 }
-body > footer div.content .disclaimer {
+#wrapper footer div.content .disclaimer {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -1216,7 +1223,7 @@ body > footer div.content .disclaimer {
   display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
   padding-left: 20px;
 }
-body > footer div.content .copyright {
+#wrapper footer div.content .copyright {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
   display: -ms-flexbox /* TWEENER - IE 10 */;
@@ -1224,12 +1231,12 @@ body > footer div.content .copyright {
   display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
   padding-right: 20px;
 }
-body > footer div.content a {
+#wrapper footer div.content a {
   font-size: 11px;
   color: #e1e1ff;
   padding-right: 0.3em;
 }
-body > footer div.content a:hover {
+#wrapper footer div.content a:hover {
   color: #fff;
 }
 div.flash {
@@ -2098,7 +2105,7 @@ div#homePage #actions section.about h2 {
 }
 @media only screen and (min-width: 768px) and (max-width: 1180px) {
   #loginPage > p {
-    font-size: 1.28em;
+    font-size: 1.15em;
   }
 }
 #loginPage form {

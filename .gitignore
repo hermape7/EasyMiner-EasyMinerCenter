@@ -9,3 +9,5 @@ app/config/dev.local.neon
 !.gitignore
 !.htaccess
 !web.config
+
+.DS_store
