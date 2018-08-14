@@ -1,0 +1,45 @@
+#uploadConfigBlock
+	flex-start-row()
+	//+m_tablet()
+	flex-wrap(nowrap)
+	flex-justify(space-around)
+	
+	> .form
+		block()
+		//flexbox(flex)
+		background white
+		//+m_tablet()
+		margin-left 10px
+		flex-start-column()
+		normalizeInputWidth(0.7 * normalInputWidth)
+	
+	#uploadConfigPreviewBlock
+		block()
+		
+		> table
+			listTable()
+			margin 0
+			
+#frm-uploadConfigForm
+	table
+		tbody
+			flex-start-column()
+			tr
+				flex-start-row()
+				min-height 45px
+				th
+					vertical-align initial
+					flex-start-row()
+					flex-self(center)
+					flex(110px)
+					label
+						padding 0
+				td
+					flex(grow:1)
+					+pc()
+						flex-self(center)
+					input[name="_submit"]
+						margin-top 5px
+	input
+		padding 11px 13px
+			

@@ -1,0 +1,38 @@
+#uploadFormBlock
+	mainBlock()
+	> h1, p
+		margin 0
+		width 100%
+		flex-direction(row)
+		flex-justify(start)
+	> form
+		width 100%
+		margin-top 10px
+	//+m_tablet()
+	#frm-uploadForm
+		> table
+			flexbox(flex)
+			width 100%
+			> tbody
+				flexbox(flex)
+				flex-direction(column)
+				flex(grow:1)
+				> tr:first-child
+					flex-start-row()
+					flex-align(center)
+					margin 5px 5px 5px 5px
+					> th
+						flex(grow:0)
+						> label
+							remove-padding()
+							line-height initial
+					> td
+						margin-left 5px
+						flex(grow:1)
+						input
+							width 100%
+							padding 10px
+							border 1px solid
+				tr
+					flex-center-column()
+					margin-top 10px
