@@ -1,0 +1,37 @@
+#frm-newMinerForm
+	table
+		width 100%
+		tbody
+			flex-start-column()
+			width 100%
+			tr
+				flex-start-row()
+				min-height 45px
+				width 100%
+				th
+					vertical-align initial
+					flex-start-row()
+					flex-self(center)
+					flex(110px)
+					label
+						padding 0
+				td
+					flex(grow:1)
+					flex-start-row()
+					flex-self(center)
+					min-height inherit
+					+pc()
+						flex-self(center)
+				input
+					form-input()
+					padding 0 5px
+				select
+					form-select()
+			tr:last-child
+				td
+					flex-start-row()
+	input[name="_submit"]
+	input[name="storno"]
+		width auto
+	input[name="_submit"]
+		margin-right 5%
