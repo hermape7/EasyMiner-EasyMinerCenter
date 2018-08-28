@@ -389,10 +389,6 @@ body {
   width: 100%;
   min-height: 100%;
 }
-#wrapper.iframe {
-  background: #fff;
-  min-width: 400.5px;
-}
 #wrapper main {
   width: 100%;
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
@@ -864,12 +860,6 @@ div.bigButtons a:hover span.details span.right {
 }
 @media only screen and (min-width: 1370px) {
   #wrapper header div.content div.headerLinks a.user .name {
-    color: transparent;
-  }
-}
-@media only screen and (min-width: 1370px) {
-  #wrapper header div.content div.headerLinks a.user .name:hover,
-  #wrapper header div.content div.headerLinks a.user .name .active {
     color: #fff;
   }
 }
@@ -1049,6 +1039,15 @@ div.bigButtons a:hover span.details span.right {
 }
 #wrapper header .headerMenu #user-info #user-text .name {
   font-weight: bold;
+}
+#wrapper header .headerMenu #user-info #user-text > a {
+  margin: 4px 4px 4px 0;
+}
+#wrapper header .headerMenu #user-info #user-text .actions {
+  width: 100%;
+}
+#wrapper header .headerMenu #user-info #user-text .actions > a {
+  width: inherit;
 }
 #wrapper header .headerMenu#headerAppsMenu {
   padding: 10px;
@@ -1295,163 +1294,6 @@ section.modal {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-div#preprocessingPage .valuesBin {
-  border: 1px solid #2d83be;
-  margin: 20px 0;
-  padding: 20px;
-  position: relative;
-}
-div#preprocessingPage .valuesBin label {
-  width: 100px;
-  display: inline-block;
-}
-div#preprocessingPage .valuesBin > input[type='text'] {
-  width: 300px;
-}
-div#preprocessingPage .valuesBin .removeBin {
-  float: right;
-  background: #fff;
-  border: 1px solid #ededed;
-  color: #800000;
-}
-div#preprocessingPage .valuesBin .removeBin:hover,
-div#preprocessingPage .valuesBin .removeBin:focus,
-div#preprocessingPage .valuesBin .removeBin:active {
-  border-color: #800000;
-  background: #800000;
-  color: #fff;
-}
-div#preprocessingPage .valuesBin .addInterval,
-div#preprocessingPage .valuesBin .addValue {
-  margin-top: 20px;
-}
-div#preprocessingPage .valuesBin .addInterval table,
-div#preprocessingPage .valuesBin .addValue table {
-  border-spacing: 0;
-}
-div#preprocessingPage .valuesBin .addInterval table label,
-div#preprocessingPage .valuesBin .addValue table label {
-  padding-top: 10px;
-}
-div#preprocessingPage .valuesBin .addInterval table select,
-div#preprocessingPage .valuesBin .addValue table select {
-  width: 60px;
-}
-div#preprocessingPage .valuesBin .addInterval table input[type='text'],
-div#preprocessingPage .valuesBin .addValue table input[type='text'] {
-  width: 67px;
-}
-div#preprocessingPage .valuesBin form input {
-  margin: 0;
-}
-div#preprocessingPage .valuesBin .intervals,
-div#preprocessingPage .valuesBin .values {
-  margin: 20px 0;
-}
-div#preprocessingPage .valuesBin .intervals .interval,
-div#preprocessingPage .valuesBin .values .interval,
-div#preprocessingPage .valuesBin .intervals .value,
-div#preprocessingPage .valuesBin .values .value {
-  border: 1px solid #075783;
-  display: inline-block;
-}
-div#preprocessingPage .valuesBin .intervals .interval input[type='text'],
-div#preprocessingPage .valuesBin .values .interval input[type='text'],
-div#preprocessingPage .valuesBin .intervals .value input[type='text'],
-div#preprocessingPage .valuesBin .values .value input[type='text'] {
-  display: none;
-}
-div#preprocessingPage .valuesBin .intervals .interval input[type='submit'],
-div#preprocessingPage .valuesBin .values .interval input[type='submit'],
-div#preprocessingPage .valuesBin .intervals .value input[type='submit'],
-div#preprocessingPage .valuesBin .values .value input[type='submit'] {
-  background: #fff;
-  border: none;
-  color: #800000;
-  padding: 10px;
-}
-div#preprocessingPage .valuesBin .intervals .interval input[type='submit']:hover,
-div#preprocessingPage .valuesBin .values .interval input[type='submit']:hover,
-div#preprocessingPage .valuesBin .intervals .value input[type='submit']:hover,
-div#preprocessingPage .valuesBin .values .value input[type='submit']:hover {
-  background: #800000;
-  color: #fff;
-}
-div#preprocessingPage .valuesBin .intervals .interval strong,
-div#preprocessingPage .valuesBin .values .interval strong,
-div#preprocessingPage .valuesBin .intervals .value strong,
-div#preprocessingPage .valuesBin .values .value strong {
-  display: inline-block;
-  margin-left: 20px;
-  margin-right: 5px;
-}
-div#preprocessingPage .valuesBin.show {
-  padding: 0 20px;
-}
-div#preprocessingPage .valuesBin.show .value,
-div#preprocessingPage .valuesBin.show .interval {
-  display: inline-block;
-  padding: 5px 10px;
-  font-weight: bold;
-}
-div#preprocessingPage div.formatValues {
-  margin: 10px 0;
-  padding: 10px;
-  color: #808080;
-  border: 1px solid #ededed;
-}
-div#preprocessingPage .formatValues span {
-  display: inline-block;
-  margin: 2px;
-  padding: 0 5px;
-  text-align: center;
-  border-right: 1px solid #ededed;
-}
-div#preprocessingPage .formatValues span:last-child {
-  border-right: none;
-}
-div#preprocessingPage table.attributesListTable {
-  background: #fff;
-  color: #434343;
-  border-spacing: 0;
-  margin: 20px 0;
-  width: 100%;
-}
-div#preprocessingPage table.attributesListTable tr:first-child th {
-  border-top: 1px solid #075783;
-}
-div#preprocessingPage table.attributesListTable th {
-  padding: 5px 8px;
-  background: #075783;
-  color: #fff;
-  text-align: left;
-  border: 1px solid #075783;
-  border-left: none;
-  border-top: none;
-}
-div#preprocessingPage table.attributesListTable th:first-child {
-  border: 1px solid #075783;
-}
-div#preprocessingPage table.attributesListTable th.empty {
-  background: #fff;
-}
-div#preprocessingPage table.attributesListTable th.empty:first-child {
-  border-left: none;
-  border-top: none;
-}
-div#preprocessingPage table.attributesListTable td {
-  padding: 5px 8px;
-  text-align: left;
-  border-bottom: 1px solid #ebebeb;
-  border-right: 1px solid #ebebeb;
-  border-top: none;
-}
-div#preprocessingPage table.attributesListTable td:first-child {
-  border-left: 1px solid #ebebeb;
-}
-div#preprocessingPage table.attributesListTable tr:nth-child(even) {
-  background: #fcfbff;
-}
 #mainBlock input.apiKey {
   width: 100%;
   font-family: "Courier New";
@@ -1546,7 +1388,7 @@ input[type="reset"] {
   display: inline-block;
   padding: 8px 13px;
   width: auto;
-  padding: 11px 13px;
+  padding: 0.625em 0.8125em;
 }
 input.button:hover,
 input[type="submit"]:hover,
@@ -2164,6 +2006,7 @@ div#homePage #actions section.about h2 {
   margin: 5px 0;
   height: 3em;
   padding: 0;
+  padding-left: 0.625em;
   border: 1px solid rgba(0,0,0,0.3);
   padding: 0;
   width: 150px;
@@ -2206,6 +2049,7 @@ div#homePage #actions section.about h2 {
   margin: 5px 0;
   height: 3em;
   padding: 0;
+  padding-left: 0.625em;
   border: 1px solid rgba(0,0,0,0.3);
   width: 150px;
 }
@@ -2250,6 +2094,7 @@ div#homePage #actions section.about h2 {
   margin: 5px 0;
   height: 3em;
   padding: 0;
+  padding-left: 0.625em;
   border: 1px solid rgba(0,0,0,0.3);
 }
 @media only screen and (min-width: 1370px) {
@@ -2362,6 +2207,7 @@ div#homePage #actions section.about h2 {
   margin: 5px 0;
   height: 3em;
   padding: 0;
+  padding-left: 0.625em;
   border: 1px solid rgba(0,0,0,0.3);
 }
 @media only screen and (min-width: 1370px) {
@@ -2497,6 +2343,7 @@ div#homePage #actions section.about h2 {
   margin: 5px 0;
   height: 3em;
   padding: 0;
+  padding-left: 0.625em;
   border: 1px solid rgba(0,0,0,0.3);
 }
 @media only screen and (min-width: 1370px) {
@@ -2669,6 +2516,21 @@ div#homePage #actions section.about h2 {
   max-width: 100px;
   margin: 0 5px 0 5px;
 }
+#mainBlock {
+  color: #434343;
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+  -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+  padding: 20px;
+  margin: 10px 10px 10px 0;
+  width: 500px;
+}
+#mainBlock > h1,
+#mainBlock > h2 {
+  margin-top: 0;
+}
 #mainBlock #frm-changePasswordForm {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
   display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
@@ -2722,6 +2584,7 @@ div#homePage #actions section.about h2 {
   margin: 5px 0;
   height: 3em;
   padding: 0;
+  padding-left: 0.625em;
   border: 1px solid rgba(0,0,0,0.3);
 }
 @media only screen and (min-width: 1370px) {
@@ -2891,6 +2754,734 @@ div#homePage #actions section.about h2 {
 }
 #newMinerPage > div #existingDataSources {
   display: none;
+}
+#preprocessingPage {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 25em;
+}
+#preprocessingPage h1,
+#preprocessingPage h2,
+#preprocessingPage p {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 100%;
+}
+#preprocessingPage .actionsDiv {
+  width: 60%;
+}
+@media only screen and (min-width: 1370px) {
+  #preprocessingPage .actionsDiv {
+    width: 50%;
+  }
+}
+#preprocessingPage .actionsDiv > a {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#preprocessingPage .formatValues {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 100%;
+  color: #808080;
+  padding: 0.625em;
+}
+#preprocessingPage .formatValues strong,
+#preprocessingPage .formatValues span {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+#preprocessingPage .formatValues span {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  margin: 2px;
+  padding: 0 5px;
+  border-right: 1px solid rgba(128,128,128,0.4);
+}
+#preprocessingPage .formatValues span:last-child {
+  border-right: none;
+}
+#preprocessingPage div.formatValues {
+  border: 1px solid rgba(128,128,128,0.4);
+}
+#preprocessingPage div.formatValues span {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+#preprocessingPage .attributesListTable {
+  overflow: auto;
+  overflow: auto;
+}
+#preprocessingPage .attributesListTable tbody {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 100%;
+}
+#preprocessingPage .attributesListTable tbody tr {
+  width: 80%;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#preprocessingPage .attributesListTable tbody th,
+#preprocessingPage .attributesListTable tbody td {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.625em;
+  padding-left: 0;
+}
+#preprocessingPage .attributesListTable tbody label {
+  margin: 0;
+  padding: 0;
+}
+#preprocessingPage .attributesListTable tbody input {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 5px 0;
+  height: 3em;
+  padding: 0;
+  padding-left: 0.625em;
+  border: 1px solid rgba(0,0,0,0.3);
+}
+@media only screen and (min-width: 1370px) {
+  #preprocessingPage .attributesListTable tbody input {
+    height: 2em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #preprocessingPage .attributesListTable tbody input {
+    font-size: 1em;
+  }
+}
+#preprocessingPage .attributesListTable .formatValues span {
+  margin: 0;
+}
+#preprocessingPage form {
+  width: 100%;
+}
+#preprocessingPage form table {
+  width: 100%;
+  overflow: auto;
+}
+#preprocessingPage form table tbody {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 100%;
+}
+#preprocessingPage form table tbody tr {
+  width: 80%;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#preprocessingPage form table tbody th,
+#preprocessingPage form table tbody td {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.625em;
+  padding-left: 0;
+}
+#preprocessingPage form table tbody label {
+  margin: 0;
+  padding: 0;
+}
+#preprocessingPage form table tbody input {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 5px 0;
+  height: 3em;
+  padding: 0;
+  padding-left: 0.625em;
+  border: 1px solid rgba(0,0,0,0.3);
+}
+@media only screen and (min-width: 1370px) {
+  #preprocessingPage form table tbody input {
+    height: 2em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #preprocessingPage form table tbody input {
+    font-size: 1em;
+  }
+}
+#preprocessingPage #frm-newAttributeForm table,
+#preprocessingPage #frm-newEquidistantIntervalsForm table,
+#preprocessingPage #frm-newEquifrequentIntervalsForm table,
+#preprocessingPage #frm-newEquisizedIntervalsForm table {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  width: 100%;
+  overflow: auto;
+}
+#preprocessingPage #frm-newAttributeForm table tbody,
+#preprocessingPage #frm-newEquidistantIntervalsForm table tbody,
+#preprocessingPage #frm-newEquifrequentIntervalsForm table tbody,
+#preprocessingPage #frm-newEquisizedIntervalsForm table tbody {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 100%;
+}
+#preprocessingPage #frm-newAttributeForm table tbody tr,
+#preprocessingPage #frm-newEquidistantIntervalsForm table tbody tr,
+#preprocessingPage #frm-newEquifrequentIntervalsForm table tbody tr,
+#preprocessingPage #frm-newEquisizedIntervalsForm table tbody tr {
+  width: 80%;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#preprocessingPage #frm-newAttributeForm table tbody th,
+#preprocessingPage #frm-newEquidistantIntervalsForm table tbody th,
+#preprocessingPage #frm-newEquifrequentIntervalsForm table tbody th,
+#preprocessingPage #frm-newEquisizedIntervalsForm table tbody th,
+#preprocessingPage #frm-newAttributeForm table tbody td,
+#preprocessingPage #frm-newEquidistantIntervalsForm table tbody td,
+#preprocessingPage #frm-newEquifrequentIntervalsForm table tbody td,
+#preprocessingPage #frm-newEquisizedIntervalsForm table tbody td {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0.625em;
+  padding-left: 0;
+}
+#preprocessingPage #frm-newAttributeForm table tbody label,
+#preprocessingPage #frm-newEquidistantIntervalsForm table tbody label,
+#preprocessingPage #frm-newEquifrequentIntervalsForm table tbody label,
+#preprocessingPage #frm-newEquisizedIntervalsForm table tbody label {
+  margin: 0;
+  padding: 0;
+}
+#preprocessingPage #frm-newAttributeForm table tbody input,
+#preprocessingPage #frm-newEquidistantIntervalsForm table tbody input,
+#preprocessingPage #frm-newEquifrequentIntervalsForm table tbody input,
+#preprocessingPage #frm-newEquisizedIntervalsForm table tbody input {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 5px 0;
+  height: 3em;
+  padding: 0;
+  padding-left: 0.625em;
+  border: 1px solid rgba(0,0,0,0.3);
+}
+@media only screen and (min-width: 1370px) {
+  #preprocessingPage #frm-newAttributeForm table tbody input,
+  #preprocessingPage #frm-newEquidistantIntervalsForm table tbody input,
+  #preprocessingPage #frm-newEquifrequentIntervalsForm table tbody input,
+  #preprocessingPage #frm-newEquisizedIntervalsForm table tbody input {
+    height: 2em;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #preprocessingPage #frm-newAttributeForm table tbody input,
+  #preprocessingPage #frm-newEquidistantIntervalsForm table tbody input,
+  #preprocessingPage #frm-newEquifrequentIntervalsForm table tbody input,
+  #preprocessingPage #frm-newEquisizedIntervalsForm table tbody input {
+    font-size: 1em;
+  }
+}
+#preprocessingPage #frm-newAttributeForm table tbody tr,
+#preprocessingPage #frm-newEquidistantIntervalsForm table tbody tr,
+#preprocessingPage #frm-newEquifrequentIntervalsForm table tbody tr,
+#preprocessingPage #frm-newEquisizedIntervalsForm table tbody tr,
+#preprocessingPage #frm-newAttributeForm table tbody th,
+#preprocessingPage #frm-newEquidistantIntervalsForm table tbody th,
+#preprocessingPage #frm-newEquifrequentIntervalsForm table tbody th,
+#preprocessingPage #frm-newEquisizedIntervalsForm table tbody th,
+#preprocessingPage #frm-newAttributeForm table tbody td,
+#preprocessingPage #frm-newEquidistantIntervalsForm table tbody td,
+#preprocessingPage #frm-newEquifrequentIntervalsForm table tbody td,
+#preprocessingPage #frm-newEquisizedIntervalsForm table tbody td {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+#preprocessingPage #frm-newAttributeForm table tbody tr,
+#preprocessingPage #frm-newEquidistantIntervalsForm table tbody tr,
+#preprocessingPage #frm-newEquifrequentIntervalsForm table tbody tr,
+#preprocessingPage #frm-newEquisizedIntervalsForm table tbody tr {
+  width: 100%;
+}
+#preprocessingPage #frm-newAttributeForm table tr:last-child th,
+#preprocessingPage #frm-newEquidistantIntervalsForm table tr:last-child th,
+#preprocessingPage #frm-newEquifrequentIntervalsForm table tr:last-child th,
+#preprocessingPage #frm-newEquisizedIntervalsForm table tr:last-child th,
+#preprocessingPage #frm-newAttributeForm table tr:last-child td,
+#preprocessingPage #frm-newEquidistantIntervalsForm table tr:last-child td,
+#preprocessingPage #frm-newEquifrequentIntervalsForm table tr:last-child td,
+#preprocessingPage #frm-newEquisizedIntervalsForm table tr:last-child td {
+  margin: 0;
+  padding: 0;
+}
+#preprocessingPage #frm-newAttributeForm table tr:last-child td input,
+#preprocessingPage #frm-newEquidistantIntervalsForm table tr:last-child td input,
+#preprocessingPage #frm-newEquifrequentIntervalsForm table tr:last-child td input,
+#preprocessingPage #frm-newEquisizedIntervalsForm table tr:last-child td input {
+  width: auto;
+  margin-right: 0.625em;
+  padding-right: 0.625em;
+}
+#frm-newIntervalEnumerationForm div,
+#frm-newNominalEnumerationForm div {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 80%;
+}
+#frm-newIntervalEnumerationForm div input,
+#frm-newNominalEnumerationForm div input {
+  width: auto;
+  margin-right: 0.625em;
+  padding-right: 0.625em;
+}
+#frm-mass-attributes.attributesListTable {
+  overflow: auto;
+  border-spacing: 0;
+}
+#frm-mass-attributes.attributesListTable tbody {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+#frm-mass-attributes.attributesListTable tbody th[scope="col"] {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  background: #075783;
+  color: #fff;
+  border-spacing: 0;
+  padding: 0.625em;
+}
+#frm-mass-attributes.attributesListTable tbody tr {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+  border-bottom: 1px solid rgba(128,128,128,0.4);
+}
+#frm-mass-attributes.attributesListTable tbody th,
+#frm-mass-attributes.attributesListTable tbody td {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  width: 20%;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+}
+#frm-mass-attributes.attributesListTable tbody th:last-child,
+#frm-mass-attributes.attributesListTable tbody td:last-child {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  width: 60%;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  border-right: 1px solid rgba(128,128,128,0.4);
+}
+#frm-mass-attributes.attributesListTable tbody td {
+  overflow: auto;
+  border-left: 1px solid rgba(128,128,128,0.4);
+  padding-left: 0.625em;
 }
 #uploadFormBlock {
   color: #434343;
@@ -3197,6 +3788,7 @@ div#homePage #actions section.about h2 {
   margin: 5px 0;
   height: 3em;
   padding: 0;
+  padding-left: 0.625em;
   border: 1px solid rgba(0,0,0,0.3);
   padding: 0 5px;
 }
@@ -3347,46 +3939,7 @@ div#homePage #actions section.about h2 {
   margin-top: 0;
 }
 #uploadConfigBlock #uploadConfigPreviewBlock > table {
-  background: #fff;
-  color: #434343;
-  border-spacing: 0;
-  margin: 20px 0;
   margin: 0;
-}
-#uploadConfigBlock #uploadConfigPreviewBlock > table tr:first-child th {
-  border-top: 1px solid #075783;
-}
-#uploadConfigBlock #uploadConfigPreviewBlock > table th {
-  padding: 5px 8px;
-  background: #075783;
-  color: #fff;
-  text-align: left;
-  border: 1px solid #075783;
-  border-left: none;
-  border-top: none;
-}
-#uploadConfigBlock #uploadConfigPreviewBlock > table th:first-child {
-  border: 1px solid #075783;
-}
-#uploadConfigBlock #uploadConfigPreviewBlock > table th.empty {
-  background: #fff;
-}
-#uploadConfigBlock #uploadConfigPreviewBlock > table th.empty:first-child {
-  border-left: none;
-  border-top: none;
-}
-#uploadConfigBlock #uploadConfigPreviewBlock > table td {
-  padding: 5px 8px;
-  text-align: left;
-  border-bottom: 1px solid #ebebeb;
-  border-right: 1px solid #ebebeb;
-  border-top: none;
-}
-#uploadConfigBlock #uploadConfigPreviewBlock > table td:first-child {
-  border-left: 1px solid #ebebeb;
-}
-#uploadConfigBlock #uploadConfigPreviewBlock > table tr:nth-child(even) {
-  background: #fcfbff;
 }
 #frm-uploadConfigForm table tbody {
   display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
@@ -3510,47 +4063,8 @@ div#homePage #actions section.about h2 {
   margin-top: 0;
 }
 #uploadColumnsBlock #uploadColumnsListBlock > table {
-  background: #fff;
-  color: #434343;
-  border-spacing: 0;
-  margin: 20px 0;
   width: 100%;
   table-layout: fixed;
-}
-#uploadColumnsBlock #uploadColumnsListBlock > table tr:first-child th {
-  border-top: 1px solid #075783;
-}
-#uploadColumnsBlock #uploadColumnsListBlock > table th {
-  padding: 5px 8px;
-  background: #075783;
-  color: #fff;
-  text-align: left;
-  border: 1px solid #075783;
-  border-left: none;
-  border-top: none;
-}
-#uploadColumnsBlock #uploadColumnsListBlock > table th:first-child {
-  border: 1px solid #075783;
-}
-#uploadColumnsBlock #uploadColumnsListBlock > table th.empty {
-  background: #fff;
-}
-#uploadColumnsBlock #uploadColumnsListBlock > table th.empty:first-child {
-  border-left: none;
-  border-top: none;
-}
-#uploadColumnsBlock #uploadColumnsListBlock > table td {
-  padding: 5px 8px;
-  text-align: left;
-  border-bottom: 1px solid #ebebeb;
-  border-right: 1px solid #ebebeb;
-  border-top: none;
-}
-#uploadColumnsBlock #uploadColumnsListBlock > table td:first-child {
-  border-left: 1px solid #ebebeb;
-}
-#uploadColumnsBlock #uploadColumnsListBlock > table tr:nth-child(even) {
-  background: #fcfbff;
 }
 #uploadColumnsBlock #uploadColumnsListBlock > table tr:first-child th:nth-child(1) {
   width: 280px;
@@ -3575,13 +4089,6 @@ div#homePage #actions section.about h2 {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
-#uploadColumnsBlock #uploadColumnsListBlock > table td.values span {
-  display: inline-block;
-  padding: 8px 10px;
-  border: 1px solid #f0f0f0;
-  background: #fff;
-  margin: 2px;
 }
 #uploadProgressBlock {
   color: #434343;
@@ -3712,88 +4219,6 @@ div#homePage #actions section.about h2 {
 #uploadDataPage div.preview #dataPreviewLoading {
   background: url("../images/icons/icon-loading-bw-20.gif") left center no-repeat;
   padding-left: 30px;
-}
-#uploadDataPage div.preview table {
-  background: #fff;
-  color: #434343;
-  border-spacing: 0;
-  margin: 20px 0;
-}
-#uploadDataPage div.preview table tr:first-child th {
-  border-top: 1px solid #075783;
-}
-#uploadDataPage div.preview table th {
-  padding: 5px 8px;
-  background: #075783;
-  color: #fff;
-  text-align: left;
-  border: 1px solid #075783;
-  border-left: none;
-  border-top: none;
-}
-#uploadDataPage div.preview table th:first-child {
-  border: 1px solid #075783;
-}
-#uploadDataPage div.preview table th.empty {
-  background: #fff;
-}
-#uploadDataPage div.preview table th.empty:first-child {
-  border-left: none;
-  border-top: none;
-}
-#uploadDataPage div.preview table td {
-  padding: 5px 8px;
-  text-align: left;
-  border-bottom: 1px solid #ebebeb;
-  border-right: 1px solid #ebebeb;
-  border-top: none;
-}
-#uploadDataPage div.preview table td:first-child {
-  border-left: 1px solid #ebebeb;
-}
-#uploadDataPage div.preview table tr:nth-child(even) {
-  background: #fcfbff;
-}
-#valuesTablePage table.valuesListTable {
-  background: #fff;
-  color: #434343;
-  border-spacing: 0;
-  margin: 20px 0;
-}
-#valuesTablePage table.valuesListTable tr:first-child th {
-  border-top: 1px solid #075783;
-}
-#valuesTablePage table.valuesListTable th {
-  padding: 5px 8px;
-  background: #075783;
-  color: #fff;
-  text-align: left;
-  border: 1px solid #075783;
-  border-left: none;
-  border-top: none;
-}
-#valuesTablePage table.valuesListTable th:first-child {
-  border: 1px solid #075783;
-}
-#valuesTablePage table.valuesListTable th.empty {
-  background: #fff;
-}
-#valuesTablePage table.valuesListTable th.empty:first-child {
-  border-left: none;
-  border-top: none;
-}
-#valuesTablePage table.valuesListTable td {
-  padding: 5px 8px;
-  text-align: left;
-  border-bottom: 1px solid #ebebeb;
-  border-right: 1px solid #ebebeb;
-  border-top: none;
-}
-#valuesTablePage table.valuesListTable td:first-child {
-  border-left: 1px solid #ebebeb;
-}
-#valuesTablePage table.valuesListTable tr:nth-child(even) {
-  background: #fcfbff;
 }
 #valuesTablePage table.valuesListTable .frequency {
   text-align: right;

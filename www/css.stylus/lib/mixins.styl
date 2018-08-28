@@ -11,6 +11,17 @@ block()
 	> h1, > h2
 		margin-top 0
 
+/** mixin pro definici malý dialogový obsah */
+smallBlock()
+	block()
+	width smallBlockWidth
+
+/** mixin pro hlavní hlavního obsahového bloku */
+mainBlock()
+	smallBlock()
+	centerContent()
+	margin blockMargin auto
+
 /***** media queries *****/
 max(bp)
 	@media only screen and (max-width: bp)
@@ -50,6 +61,7 @@ form-input()
 	+pc()
 		height 2em
 	padding 0
+	padding-left 0.625em
 	border 1px solid rgba(0, 0, 0, 0.3)
 	+min(large-start-value)
 		font-size 1.0em
@@ -103,3 +115,58 @@ remove-padding()
 
 remove-margin()
 	margin 0
+
+preprocessingTable()
+	overflow auto
+	tbody
+		flex-start-column()
+		width 100%
+		tr
+			width 80%
+			flexbox(flex)
+			flex-justify(end)
+			flex-align(center)
+		th, td
+			flexbox(flex)
+			flex-justify(end)
+			flex-align(center)
+			margin 0
+			padding 0.625em
+			padding-left 0
+		label
+			margin 0
+			padding 0
+		input
+			form-input()
+
+//basicTableWithBorders()
+//	background tableBgColor
+//	color tableColor
+//	border-spacing 0
+//	margin 20px 0
+//	width 90%
+//	tbody
+//		flex-start-column()
+//		width 100%
+//		overflow auto
+//	tr
+//		width 80%
+//		flexbox(flex)
+//		flex-justify(end)
+//		flex-align(center)
+//	th
+//		flex-center-row()
+//		border-left  none
+//		border-top none
+//		&.empty
+//			background tableBgColor
+//			&:first-child
+//				border-left none
+//				border-top  none
+//	td
+//		flex-center-row()
+//	input
+//		form-input()
+//
+//preprocessingTable()
+//	basicTableWithBorders()

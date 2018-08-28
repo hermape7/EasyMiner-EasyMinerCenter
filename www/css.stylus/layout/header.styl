@@ -126,11 +126,7 @@ headerAppsLink()
 							font-size 0.8em
 							letter-spacing 1px
 							+pc()
-								color transparent
-							&:hover
-							.active
-								+pc()
-									color headerTextColor
+								color headerTextColor
 					&.help
 						headerLink()
 						background-image url('../images/icons/help-48.png')
@@ -159,8 +155,6 @@ headerAppsLink()
 				flexbox(flex)
 				.img
 					flexbox(flex)
-					//display block
-					//float left
 					border none
 					margin headerMenuPadding
 					width headerUserMenuImageSize
@@ -177,6 +171,12 @@ headerAppsLink()
 					margin 10px
 					.name
 						font-weight bold
+					> a
+						margin 4px 4px 4px 0
+					.actions
+						width 100%
+						> a
+							width inherit
 			
 			&#headerAppsMenu
 				padding 10px

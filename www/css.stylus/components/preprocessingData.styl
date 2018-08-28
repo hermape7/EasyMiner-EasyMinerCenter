@@ -1,0 +1,113 @@
+#preprocessingPage
+	flex-center-column()
+	min-width 25em
+	h1, h2, p
+		flex-start-row()
+		width 100%
+	.actionsDiv
+		width 60%
+		+pc()
+			width 50%
+		> a
+			flex-center-row()
+	.formatValues
+		flex-start-row()
+		width 100%
+		color gray
+		//border 1px solid rgba(gray, 0.4)
+		padding 0.625em
+		strong, span
+			flex-self(center)
+		span
+			flexbox(flex)
+			flex(grow:1)
+			margin 2px
+			padding 0 5px
+			border-right 1px solid rgba(gray, 0.4)
+			&:last-child
+				border-right none
+	
+	div.formatValues
+		border 1px solid rgba(gray, 0.4)
+		span
+			flex(grow:0)
+	
+	.attributesListTable
+		overflow auto
+		preprocessingTable()
+		.formatValues
+			span
+				margin 0
+	
+	form
+		width 100%
+		table
+			width 100%
+			preprocessingTable()
+	
+	#frm-newAttributeForm
+	#frm-newEquidistantIntervalsForm
+	#frm-newEquifrequentIntervalsForm
+	#frm-newEquisizedIntervalsForm
+		table
+			flexbox(flex)
+			width 100%
+			preprocessingTable()
+			tbody
+				tr, th, td
+					flex-justify(center)
+				tr
+					width 100%
+			tr:last-child
+				th, td
+					margin 0
+					padding 0
+				td
+					//width 80%
+					input
+						width auto
+						margin-right 0.625em
+						padding-right 0.625em
+
+#frm-newIntervalEnumerationForm
+#frm-newNominalEnumerationForm
+	div
+		flexbox(flex)
+		flex-justify(end)
+		width 80%
+		input
+			width auto
+			margin-right 0.625em
+			padding-right 0.625em
+
+#frm-mass-attributes.attributesListTable
+	overflow auto
+	border-spacing 0
+	tbody
+		flex-start-column()
+		th[scope="col"]
+			flex-center-row()
+			flex-justify(start)
+			background tableHeadBgColor
+			color tableHeadColor
+			border-spacing 0
+			padding 0.625em
+		tr
+			flex-center-row()
+			flex-justify(start)
+			width 100%
+			border-bottom 1px solid rgba(gray, 0.4)
+		th, td
+			flex-center-row()
+			flex-justify(start)
+			//width 20%
+			flex(20%, grow:1)
+		th:last-child,
+		td:last-child
+			//width 60%
+			flex(60%, grow:1)
+			border-right 1px solid rgba(gray, 0.4)
+		td
+			overflow auto
+			border-left 1px solid rgba(gray, 0.4)
+			padding-left 0.625em
